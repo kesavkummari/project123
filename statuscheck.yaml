@@ -1,0 +1,32 @@
+---
+- name: Check System Usage
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Check RAM usage
+      shell: free -m | grep Mem
+      register: ram_usage
+      changed_when: false
+
+    - name: Display RAM usage
+      debug:
+        msg: "{{ ram_usage.stdout_lines }}"
+
+    - name: Check CPU usage
+      shell: top -bn1 | grep load | awk '{printf \"CPU Load: %.2f\", $(NF-2)}'
+      register: cpu_usage
+      changed_when: false
+
+    - name: Display CPU usage
+      debug:
+        msg: "{{ cpu_usage.stdout }}"
+
+    - name: Check Hard Disk usage
+      shell: df -h | grep -vE '^Filesystem|tmpfs|cdrom'
+      register: disk_usage
+      changed_when: false
+
+    - name: Display Hard Disk usage
+      debug:
+        msg: "{{ disk_usage.stdout_lines }}"
