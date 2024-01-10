@@ -4,6 +4,9 @@ node {
       git url: 'https://github.com/kesavkummari/project123.git', branch: 'main'
       mvnHome = tool 'maven'
    }
+  stage ('CodeScan') {
+      sh "'${mvnHome}/bin/mvn' sonar:sonar"
+  }
   stage ('Clean') {
       sh "'${mvnHome}/bin/mvn' clean"
   }
