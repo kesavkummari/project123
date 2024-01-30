@@ -2,8 +2,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aws.codestar.projecttemplates</groupId>
-    <artifactId>kloudbinay</artifactId>
-    <version>3.6.0</version>
+    <artifactId>cloudbinary</artifactId>
+    <version>3.6.3</version>
     <!-- <version>9.10.3-SNAPSHOT</version> -->
     <packaging>war</packaging>
     <name>Cloud Binary - Sample Spring MVC Application</name>
@@ -14,26 +14,26 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <sonar.host.url>http://34.234.93.106:9000</sonar.host.url>
-        <sonar.organization>b12_b13_JavaCode</sonar.organization>
-        <sonar.projectKey>b12_b13_JavaCode</sonar.projectKey>
-        <sonar.login>sqp_ff4aa65897b63c5aa28be57fdaaa64fe1e0d72f1</sonar.login>
+        <sonar.host.url>http://54.242.102.123:9000</sonar.host.url>
+        <sonar.organization>javacicdcodescan</sonar.organization>
+        <sonar.projectKey>javacicdcodescan</sonar.projectKey>
+        <sonar.login>sqp_18ab67f60816c72d557b344d60026f6dd27f07ca</sonar.login>
 
     </properties>
 
-       
+
 <distributionManagement>
 
     <repository>
         <id>release</id>
         <name>libs-release-local</name>
-        <url>http://54.234.100.62:8082/artifactory/libs-release-local/</url>
+        <url>http://54.242.3.145:8082/artifactory/libs-release-local/</url>
     </repository>
 
     <snapshotRepository>
         <id>snapshots</id>
         <name>libs-snapshot-local</name>
-        <url>http://54.234.100.62:8082/artifactory/libs-snapshot-local/</url>
+        <url>http://54.242.3.145:8082/artifactory/libs-snapshot-local/</url>
     </snapshotRepository>
 
 </distributionManagement>

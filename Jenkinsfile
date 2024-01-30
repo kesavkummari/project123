@@ -50,14 +50,14 @@ pipeline {
                 sh 'mvn deploy'
             }
         }
-        stage('Stage-9 : Deployment - Deploy a Artifact kloudbinay-3.6.0-SNAPSHOT.war file to Tomcat Server') { 
+        stage('Stage-9 : Deployment - Deploy a Artifact cloudbinay-3.6.3-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://18.207.94.1:8080/manager/text/deploy?path=/kesav&update=true"'
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://54.90.133.194:8080/manager/text/deploy?path=/cloudbinary&update=true"'
             }
         }
         stage('Stage-10 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://18.207.94.1:8080/kesav"'
+                sh 'curl --retry-delay 10 --retry 5 "http://54.90.133.194:8080/cloudbinary"'
             }
         } 
     }
