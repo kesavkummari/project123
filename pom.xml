@@ -14,10 +14,10 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <sonar.host.url>http://54.242.102.123:9000</sonar.host.url>
-        <sonar.organization>javacicdcodescan</sonar.organization>
-        <sonar.projectKey>javacicdcodescan</sonar.projectKey>
-        <sonar.login>sqp_18ab67f60816c72d557b344d60026f6dd27f07ca</sonar.login>
+        <sonar.host.url>http://54.204.232.42:9000</sonar.host.url>
+        <sonar.organization>democodescan</sonar.organization>
+        <sonar.projectKey>democodescan</sonar.projectKey>
+        <sonar.login>sqp_8d5476800d9c30c979999332196ecac317b9a0df</sonar.login>
 
     </properties>
 
@@ -27,13 +27,13 @@
     <repository>
         <id>release</id>
         <name>libs-release-local</name>
-        <url>http://54.242.3.145:8082/artifactory/libs-release-local/</url>
+        <url>http://3.92.184.183:8082/artifactory/libs-release-local/</url>
     </repository>
 
     <snapshotRepository>
         <id>snapshots</id>
         <name>libs-snapshot-local</name>
-        <url>http://54.242.3.145:8082/artifactory/libs-snapshot-local/</url>
+        <url>http://3.92.184.183:8082/artifactory/libs-snapshot-local/</url>
     </snapshotRepository>
 
 </distributionManagement>
