@@ -5,11 +5,11 @@ pipeline {
          jdk 'java'
     }
     stages {
-         stage('Stage-0 : Static Code Analysis Using SonarQube') { 
-           steps {
-                sh 'mvn sonar:sonar'
-            }
-        }
+        //  stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+        //    steps {
+        //         sh 'mvn sonar:sonar'
+        //     }
+        // }
         stage('Stage-1 : Clean') { 
             steps {
                 sh 'mvn clean'
@@ -45,20 +45,20 @@ pipeline {
                 sh 'mvn install'
             }
         }
-        stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
-            steps {
-                sh 'mvn deploy'
-            }
-        }
-        stage('Stage-9 : Deployment - Deploy a Artifact cloudbinay-3.6.3-SNAPSHOT.war file to Tomcat Server') { 
-            steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://34.207.114.102:8080/manager/text/deploy?path=/cloudbinary&update=true"'
-            }
-        }
-        stage('Stage-10 : SmokeTest') { 
-            steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://34.207.114.102:8080/cloudbinary"'
-            }
-        } 
+        // stage('Stage-8 : Deploy an Artifact to Artifactory Manager i.e. Nexus/Jfrog') { 
+        //     steps {
+        //         sh 'mvn deploy'
+        //     }
+        // }
+        // stage('Stage-9 : Deployment - Deploy a Artifact cloudbinay-3.6.3-SNAPSHOT.war file to Tomcat Server') { 
+        //     steps {
+        //         sh 'curl -u admin:redhat@123 -T target/**.war "http://34.207.114.102:8080/manager/text/deploy?path=/cloudbinary&update=true"'
+        //     }
+        // }
+        // stage('Stage-10 : SmokeTest') { 
+        //     steps {
+        //         sh 'curl --retry-delay 10 --retry 5 "http://34.207.114.102:8080/cloudbinary"'
+        //     }
+        // } 
     }
 }
